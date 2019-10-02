@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:weightSum="100"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="60dp"
+    android:background="#f5f3f3"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <Button
+        android:id="@+id/book_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:textColor="@color/signIn_signUp"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:text="@string/book_service"
+        android:textAllCaps="false"
+        android:typeface="serif"
+        />
+
+    <Button
+        android:id="@+id/rate_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:textStyle="bold"
+        android:text="@string/rate_card"
+        android:typeface="serif"
+        android:textAllCaps="false"
+        android:textColor="@color/signIn_signUp"
+        android:background="@android:color/transparent"/>
+</LinearLayout>
+

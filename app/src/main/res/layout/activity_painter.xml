@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/start"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context="com.example.lenovo.homebuilt.activity.PainterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:orientation="vertical">
+
+        <include layout="@layout/appbar_layout" />
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/celling_art_item_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_check_box"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp" />
+
+            <TextView
+                android:id="@+id/celling_art"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/celling_art_item_checked"
+                android:text="Celling Art" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/Pop_treatment_item_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_check_box"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp" />
+
+            <TextView
+                android:id="@+id/Pop_treatment_shape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/Pop_treatment_item_checked"
+                android:text="Pop Treatment" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/polish_item_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_check_box"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp" />
+
+            <TextView
+                android:id="@+id/polish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/polish_item_checked"
+                android:text="Polish" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Minimum Service charges will be Rs 250. This will be adjusted in the billing amount."
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/requirement_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_requirement" />
+
+            <EditText
+                android:id="@+id/requirement"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/requirement_text"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/requirement_rectangle"
+                android:inputType="text"
+                android:labelFor="@id/requirement"
+                android:maxLines="3" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/view_cart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="#52a65a"
+        android:drawableEnd="@drawable/ic_right"
+        android:text="View Cart"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp" />
+</LinearLayout>

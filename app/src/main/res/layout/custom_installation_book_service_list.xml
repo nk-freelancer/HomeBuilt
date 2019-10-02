@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/quantity_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <ImageButton
+                android:id="@+id/desc_quantity"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/rectangle"
+                android:contentDescription="@string/desc_quantity"
+                android:src="@drawable/ic_subtract" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:layout_toEndOf="@id/desc_quantity"
+                android:background="#52a65a"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:textColor="#FFF" />
+
+
+            <ImageButton
+                android:id="@+id/inc_quantity"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_toEndOf="@id/quantity"
+                android:background="@drawable/rectangle"
+                android:contentDescription="@string/inc_quantity"
+                android:src="@drawable/ic_add"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/service_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/quantity_layout"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:paddingEnd="10dp"
+            android:paddingStart="0dp"
+            android:text="Water Cooler"
+            android:textColor="#454343" />
+
+        <TextView
+            android:id="@+id/service_price"
+            android:drawableLeft="@mipmap/rupee_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/service_name"
+            android:text="300" />
+    </RelativeLayout>
+</LinearLayout>

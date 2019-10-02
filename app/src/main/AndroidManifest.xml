@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lenovo.homebuilt">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/appName"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDPV03Vs6nCgR_4Mq-N1US13fWYZLidZhU" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".activity.SplashScreen"
+            android:label="@string/appName"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.HomeScreenActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".activity.AllServicesActivity" />
+        <activity android:name=".activity.BookServiceActivity" />
+        <activity android:name=".activity.RateCardActivity" />
+        <activity android:name=".activity.PaymentActivity" />
+        <activity android:name=".activity.ArchitectActivity" />
+        <activity android:name=".activity.ModularKitchenActivity" />
+        <activity android:name=".activity.VastuConsultantActivity" />
+        <activity android:name=".activity.PainterActivity" />
+        <activity android:name=".activity.InteriorDesignerActivity" />
+        <activity android:name=".activity.SolarPlantingActivity" />
+        <activity android:name=".activity.FlooringActivity"></activity>
+    </application>
+
+</manifest>

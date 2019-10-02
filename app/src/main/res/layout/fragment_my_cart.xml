@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lenovo.homebuilt.fragment.MyCartFragment">
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#52a65a"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:background="#7ec885"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/cart_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:text="0 ITEMS IN CARDT"
+                android:textColor="#FFF"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/cart_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_rupee_icon"
+                android:textColor="#FFF"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_cart_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="60"
+            android:gravity="end"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/view_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:text="View Cart"
+                android:textColor="#FFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/header_main_page_clist1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        >
+
+        <ListView
+            android:id="@+id/repair_service_list"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/emptyElement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="NO ITEM AVAILABLE!"
+            android:textColor="#525252"
+            android:textSize="19.0sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lenovo.homebuilt.activity.FlooringActivity">
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/appbar_layout"/>
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#52a65a"
+        android:baselineAligned="false"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="45"
+            android:background="#7ec885"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#7ec885">
+
+                <TextView
+                    android:id="@+id/cart_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:text="0 ITEMS IN CARDT"
+                    android:textColor="#FFF"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/cart_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/cart_text"
+                    android:layout_below="@id/cart_text"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/ic_rupee_icon"
+                    android:textColor="#FFF"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/cart_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/cart_text"
+                    android:contentDescription="@string/how_it_works"
+                    android:src="@drawable/ic_shopping_cart" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_cart_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="55"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/view_cart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:gravity="end"
+                android:padding="10dp"
+                android:text="View Cart"
+                android:textColor="#FFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/appName"
+                android:src="@drawable/ic_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/appbar"
+        android:padding="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/area_flooring_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/area_flooring_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Area for flooring"
+                    android:textColor="#000"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/area_flooring_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/area_flooring_text"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/less_1th_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/less_1th"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/less_1th_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Less than 1000 sq. ft." />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/more_1th_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/more_1th"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/more_1th_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="1000-2500 sq. ft." />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/more_25th_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/more_25th"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/more_25th_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="2500-5000 sq. ft." />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/more_5th_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/more_5th"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/more_5th_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="More 5000 sq. ft." />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/area_flooring_linear_layout"
+                    android:background="@color/colorAccent" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/your_requirement_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/your_requirement_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Where do your requirement ?"
+                    android:textColor="#000"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/your_requirement_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/your_requirement_text"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/fresh_tiling_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/fresh_tiling"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/fresh_tiling_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Fresh Tiling" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/r_tiling_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/r_tiling"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/r_tiling_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Re-Tiling" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/your_requirement_linear_layout"
+                    android:background="@color/colorAccent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/flooring_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/flooring_type_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Flooring Type"
+                    android:textColor="#000"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/flooring_type_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/flooring_type_text"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/verified_tiles_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/verified_tiles"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/verified_tiles_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Verified Tiles" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/geramic_tiles_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/geramic_tiles"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/geramic_tiles_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Geramic Tiles" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/granite_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/granite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/granite_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Granite" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/marble_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/marble"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/marble_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Marble" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/wooden_flooring_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/wooden_flooring"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/wooden_flooring_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Wooden Flooring" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/flooring_type_linear_layout"
+                    android:background="@color/colorAccent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/budget_layout"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/budget_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Budget"
+                    android:textColor="#000"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/budget_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/budget_text"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/less_2l_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/less_2l"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/less_2l_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Less than 2 lakhs" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/more_2l_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/more_2l"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/more_2l_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="2-5 lakhs " />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp">
+
+                        <ImageView
+                            android:id="@+id/more_5l_item_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_radio_button_unchecked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp" />
+
+                        <TextView
+                            android:id="@+id/more_5l"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/more_5l_item_checked"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="More than 5 lakhs" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/budget_linear_layout"
+                    android:background="@color/colorAccent" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/describe_your_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Describe Your Project" />
+
+                <EditText
+                    android:id="@+id/describe"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/describe_your_project"
+                    android:background="@drawable/requirement_rectangle"
+                    android:inputType="text"
+                    android:maxLines="3" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Note: Charges will be decided upon inspection."/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

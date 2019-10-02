@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/location_setting"
+            android:src="@drawable/ic_place" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/allow_location_access"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="@string/location_text"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/enable_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/enable_location"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/or"/>
+
+        <TextView
+            android:text="@string/enable_location_manually"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    </LinearLayout>

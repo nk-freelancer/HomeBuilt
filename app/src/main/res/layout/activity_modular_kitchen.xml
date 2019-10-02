@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/start"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context="com.example.lenovo.homebuilt.activity.ModularKitchenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:orientation="vertical">
+
+        <include layout="@layout/appbar_layout" />
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/l_item_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_check_box"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp" />
+
+            <TextView
+                android:id="@+id/l_shape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/l_item_checked"
+                android:text="L Shape" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/u_item_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_check_box"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp" />
+
+            <TextView
+                android:id="@+id/u_shape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/u_item_checked"
+                android:text="U Shape" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/straight_item_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_check_box"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp" />
+
+            <TextView
+                android:id="@+id/straight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/straight_item_checked"
+                android:text="Straight" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/island_kitchen_item_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_check_box"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp" />
+
+            <TextView
+                android:id="@+id/island_kitchen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/island_kitchen_item_checked"
+                android:text="Island Kitchen" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/requirement_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_requirement" />
+
+            <EditText
+                android:id="@+id/requirement"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/requirement_text"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/requirement_rectangle"
+                android:inputType="text"
+                android:labelFor="@id/requirement"
+                android:maxLines="3" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/view_cart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="#52a65a"
+        android:drawableRight="@drawable/ic_right"
+        android:text="View Cart"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp" />
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal"
+    app:cardCornerRadius="0dp">
+
+    <RelativeLayout
+        android:layout_width="170dp"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/trending_service_image"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:contentDescription="@string/trending_service"
+            android:padding="0dp"
+            android:src="@mipmap/notification" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/trending_service_image"
+            android:padding="5dp">
+
+            <RatingBar
+                android:id="@+id/trending_service_rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:rating="5"
+                android:stepSize="0.5" />
+
+            <TextView
+                android:id="@+id/trending_service_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/trending_service_rating"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="5dp"
+                android:paddingStart="0dp"
+                android:text="@string/plumber"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/trending_service_charge_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trending_service_name"
+                android:text="@string/starting_from"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/trending_service_charge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trending_service_name"
+                android:drawableStart="@mipmap/rupee_icon"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/trending_service_charge_text"
+                android:text="1199"
+                android:textColor="#2adfc7"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

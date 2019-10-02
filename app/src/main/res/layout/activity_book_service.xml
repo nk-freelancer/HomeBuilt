@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/start"
+    tools:context="com.example.lenovo.homebuilt.activity.BookServiceActivity">
+
+    <include
+        android:id="@id/appbar"
+        layout="@layout/appbar_layout" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/book_service_tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/book_service_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/book_service_tabLayout" />
+
+</RelativeLayout>

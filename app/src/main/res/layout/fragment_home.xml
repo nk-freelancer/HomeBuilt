@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/start"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.lenovo.homebuilt.fragment.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/your_locality_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_locality"
+                android:textAllCaps="true"
+                android:textColor="#000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/yourCurrentLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableEnd="@drawable/ic_expand_more"
+                android:drawablePadding="5dp"
+                android:labelFor="@id/yourCurrentLocation"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/search_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/your_locality_layout"
+            android:background="@drawable/location_bg"
+            android:cursorVisible="false"
+            android:drawablePadding="10dp"
+            android:drawableStart="@mipmap/search2"
+            android:elevation="5dp"
+            android:hint="@string/search_service"
+            android:inputType="text"
+            android:labelFor="@id/search_service"
+            android:maxLines="1"
+            android:paddingBottom="7dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="15dp"
+            android:paddingTop="7dp"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/services_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_service"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/all_service"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:baselineAligned="false"
+                android:weightSum="100">
+
+                <RelativeLayout
+                    android:id="@+id/architect_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30">
+
+                    <ImageView
+                        android:id="@+id/architect_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/architectur"
+                        android:contentDescription="@string/architect" />
+
+                    <TextView
+                        android:id="@+id/architect_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/architect_icon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/architect"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/vastu_consultant_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40">
+
+                    <ImageView
+                        android:id="@+id/vastu_consultant_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/flooring"
+                        android:contentDescription="@string/vastu_consultant" />
+
+                    <TextView
+                        android:id="@+id/vastu_consultant_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vastu_consultant_icon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:ellipsize="end"
+                        android:text="@string/vastu_consultant"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/plumber_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25">
+
+                    <ImageView
+                        android:id="@+id/plumber_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/plumber"
+                        android:contentDescription="@string/plumber" />
+
+                    <TextView
+                        android:id="@+id/plumber_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/plumber_icon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/plumber"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:baselineAligned="false"
+                android:weightSum="100">
+
+                <RelativeLayout
+                    android:id="@+id/electrician_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30">
+
+                    <ImageView
+                        android:id="@+id/electrician_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/electrician"
+                        android:contentDescription="@string/electrician" />
+
+                    <TextView
+                        android:id="@+id/electrician_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/electrician_icon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/electrician"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/interior_designer_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40">
+
+                    <ImageView
+                        android:id="@+id/interior_designer_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/interior_design"
+                        android:contentDescription="@string/interior_designer" />
+
+                    <TextView
+                        android:id="@+id/interior_designer_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/interior_designer_icon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:ellipsize="end"
+                        android:text="@string/interior_designer"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/carpenter_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25">
+
+                    <ImageView
+                        android:id="@+id/carpenter_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/carpenter"
+                        android:contentDescription="@string/carpenter" />
+
+                    <TextView
+                        android:id="@+id/carpenter_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/carpenter_icon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/carpenter"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:baselineAligned="false"
+                android:weightSum="100">
+
+                <RelativeLayout
+                    android:id="@+id/painter_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30">
+
+                    <ImageView
+                        android:id="@+id/painter_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/painter"
+                        android:contentDescription="@string/painter" />
+
+                    <TextView
+                        android:id="@+id/painter_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/painter_icon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/painter"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/modular_kitchen_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="37">
+
+                    <ImageView
+                        android:id="@+id/modular_kitchen_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/modular_kitchen"
+                        android:contentDescription="@string/modular_kitchen" />
+
+                    <TextView
+                        android:id="@+id/modular_kitchen_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/modular_kitchen_icon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/modular_kitchen"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/solar_planting_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30">
+
+                    <ImageView
+                        android:id="@+id/solar_planting_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/solar_painting"
+                        android:contentDescription="@string/solar_planting" />
+
+                    <TextView
+                        android:id="@+id/solar_planting_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/solar_planting_icon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/solar_planting"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/view_all_services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/view_all_service_bg"
+                android:elevation="5dp"
+                android:padding="10dp"
+                android:text="@string/view_all_services" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/services_layout"
+            android:layout_marginTop="10dp"
+            android:background="@color/horizontal_line" />
+
+        <LinearLayout
+            android:id="@+id/trending_service_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1"
+            android:orientation="vertical"
+            android:paddingEnd="5dp"
+            android:paddingStart="10dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trending_service"
+                android:textColor="#000"
+                android:textSize="@dimen/heading_text"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/trending_service_recycler_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/trending_service_layout"
+            android:background="@color/horizontal_line" />
+
+        <LinearLayout
+            android:id="@+id/repair_service_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/trending_service_layout"
+            android:orientation="vertical"
+            android:paddingEnd="5dp"
+            android:paddingStart="10dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/repair_service"
+                android:textColor="#000"
+                android:textSize="@dimen/heading_text"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/repair_service_recycler_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/repair_service_layout"
+            android:background="@color/horizontal_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view2"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/customer_testimonials"
+                android:textColor="#000"
+                android:textSize="@dimen/heading_text"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginTop="20dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true" />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="30dp"
+                    app:ci_drawable="@drawable/selected_circle_indicator"
+                    app:ci_drawable_unselected="@drawable/unselected_circle_indicator" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

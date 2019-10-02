@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/start"
+    tools:context="com.example.lenovo.homebuilt.activity.PaymentActivity">
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/appbar_layout" />
+
+    <TextView
+        android:id="@+id/your_delivery_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/your_delivery_details"
+        android:textAllCaps="true"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/your_delivery_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/your_delivery_details"
+        android:background="@drawable/location_bg"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_verified_user"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:textAllCaps="true"
+            android:textColor="#454343"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_best_service"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:textAllCaps="true"
+            android:textColor="#454343"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contact"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_location"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:textAllCaps="true"
+            android:textColor="#454343"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/address"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/delivery_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_delivery_date"
+                android:gravity="center_vertical"
+                android:hint="@string/delivery_date"
+                android:paddingBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:textAllCaps="true"
+                android:textColor="#454343"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/delivery_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_delivery_time"
+                android:gravity="center_vertical"
+                android:hint="@string/delivery_time"
+                android:paddingBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:textAllCaps="true"
+                android:textColor="#454343"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/view_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#52a65a"
+        android:drawableEnd="@drawable/ic_right"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/select_payment_method"
+        android:textColor="#FFF"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view_cart"
+        android:layout_below="@id/your_delivery_address">
+
+        <TextView
+            android:id="@+id/service_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:textAllCaps="true"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/service_id"
+            android:contentDescription="@string/appName"
+            android:paddingBottom="8dp"
+            android:paddingTop="12dp"
+            android:src="@drawable/ic_arrow_forward" />
+
+        <TextView
+            android:id="@+id/service_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/view"
+            android:paddingBottom="10dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="10dp"
+            android:textAllCaps="true"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/service_name"
+            android:background="@color/colorAccent" />
+
+        <ListView
+            android:id="@+id/cartListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/service_id"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+
+    </RelativeLayout>
+</RelativeLayout>

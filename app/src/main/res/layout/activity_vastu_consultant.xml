@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:background="@mipmap/start"
+    tools:context="com.example.lenovo.homebuilt.activity.VastuConsultantActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:orientation="vertical">
+
+        <include layout="@layout/appbar_layout"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/vastu_consultant_item_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_check_box"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp" />
+
+            <TextView
+                android:id="@+id/vastu_consultant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/vastu_consultant_item_checked"
+                android:text="Vastu Consultancy" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/vastu_designing_item_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_check_box"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp" />
+
+            <TextView
+                android:id="@+id/vastu_designing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/vastu_designing_item_checked"
+                android:text="Vastu Designing" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/fenshui_item_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_check_box"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp" />
+
+            <TextView
+                android:id="@+id/fenshui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/fenshui_item_checked"
+                android:text="Fenshui" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/pyramidiology_item_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_check_box"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp" />
+
+            <TextView
+                android:id="@+id/pyramidiology"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/pyramidiology_item_checked"
+                android:text="Pyramidiology" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Visiting Charges Rs 450. Consultation charges will be Rs 3000 per session"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/requirement_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_requirement" />
+
+            <EditText
+                android:id="@+id/requirement"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/requirement_text"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/requirement_rectangle"
+                android:inputType="text"
+                android:labelFor="@id/requirement"
+                android:maxLines="3" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/view_cart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="#52a65a"
+        android:drawableRight="@drawable/ic_right"
+        android:text="View Cart"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp">
+
+    </Button>
+</LinearLayout>
